@@ -10,6 +10,8 @@ import Player from "./views/player.vue";
 body {
   margin: 0;
   padding: 0;
+  background: url("./assets/bg.jpg");
+  background-attachment: fixed;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

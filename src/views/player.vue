@@ -9,6 +9,7 @@
         <audio :src="item.link" controls></audio>
       </div>
     </template>
+    <footer>Developed by JasonBai</footer>
   </div>
 </template>
 
@@ -19,7 +20,7 @@ let list = ref([]);
 const listData = computed(() => {
   return list.value.map((name) => {
     return {
-      title: name,
+      title: name.slice(0,-4),
       link: `https://lubanseven.gitee.io/nerves/mp3/${name}`,
     };
   });
@@ -43,11 +44,18 @@ function getList() {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 h1 {
-  margin: 20px 0 20px;
+  margin: 20px 0 5px;
   font-size: 24px;
+}
+h6 {
+  margin: 15px 0;
 }
 .hero {
   display: block;
   margin: 10px auto;
+}
+footer {
+  padding: 20px;
+  font-size: 13px;
 }
 </style>

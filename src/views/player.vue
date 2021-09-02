@@ -2,27 +2,35 @@
   <div class="player-wrap">
     <img src="../assets/logo.png" />
     <h1>Hi</h1>
+    <audio :src="src" controls></audio>
     <el-button @click="play">adff</el-button>
   </div>
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref, computed } from "vue";
+let list = ref([]);
+const i = ref(0);
+const src = computed(() => {
+  console.log(list.value);
+  return "https://lubanseven.gitee.io/nerves/mp3/" + list.value[i.value];
+});
+
 onMounted(() => {
   getList();
 });
-const play = () => {
+function play() {
   console.log("play");
-};
-const getList = () => {
+}
+function getList() {
   fetch("/nerves/list.json")
     .then((res) => {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
+      list = ref(data);
     });
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

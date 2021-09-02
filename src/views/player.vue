@@ -9,6 +9,7 @@
         <audio :src="item.link" controls></audio>
       </div>
     </template>
+    <a href="https://gitee.com/lubanseven/nerves/raw/master/pdf/HopeandHelpforYourNerves.pdf">Download the PDF Version</a>
     <footer>Developed by JasonBai</footer>
   </div>
 </template>
@@ -53,6 +54,12 @@ h6 {
 .hero {
   display: block;
   margin: 10px auto;
+}
+a {
+  display: block;
+  font-size: 13px;
+  color:#000;
+  margin: 30px 0 0;
 }
 footer {
   padding: 20px;

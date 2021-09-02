@@ -1,6 +1,6 @@
 module.exports = {
     //部署应用包时的基本 URL
-    publicPath: process.env.NODE_ENV === 'production' ? '/nerves' : '/',
+    publicPath: process.env.NODE_ENV === 'production' ? '/selfhelp' : '/',
     //当运行 vue-cli-service build 时生成的生产环境构建文件的目录
     outputDir: 'dist',
     // 生产环境是否生成 sourceMap 文件 sourceMap的详解请看末尾  

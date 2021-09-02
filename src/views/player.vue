@@ -1,9 +1,9 @@
 <template>
   <div class="player-wrap">
     <img src="../assets/logo.png" />
-    <h1>Hi</h1>
+    <h1>《精神焦虑症的自救》</h1>
     <audio :src="src" controls></audio>
-    <el-button @click="play">adff</el-button>
+    <!-- <el-button @click="play">adff</el-button> -->
   </div>
 </template>
 
@@ -28,7 +28,7 @@ function getList() {
       return res.json();
     })
     .then((data) => {
-      list = ref(data);
+      list.value = data;
     });
 }
 </script>

@@ -2,12 +2,26 @@
   <div class="player-wrap">
     <img src="../assets/logo.png" />
     <h1>Hi</h1>
+    <el-button @click="play">adff</el-button>
   </div>
 </template>
 
-<script>
-export default {
-  name: "player",
+<script setup>
+import { onMounted } from "vue";
+onMounted(() => {
+  getList();
+});
+const play = () => {
+  console.log("play");
+};
+const getList = () => {
+  fetch("/nerves/list.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+    });
 };
 </script>
 

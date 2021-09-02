@@ -2,15 +2,8 @@
   <Player />
 </template>
 
-<script>
+<script setup>
 import Player from "./views/player.vue";
-
-export default {
-  name: "App",
-  components: {
-    Player,
-  },
-};
 </script>
 
 <style lang="scss">

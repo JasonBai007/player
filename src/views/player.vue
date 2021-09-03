@@ -43,7 +43,8 @@ function getList() {
 
 function download(e) {
   e.preventDefault()
-  alert('链接: https://pan.baidu.com/s/12zcvDv6h-3AiGy9B-cOfjA 提取码: w3u5 复制这段内容后打开百度网盘手机App，操作更方便哦')
+  alert('即将跳转到: https://pan.baidu.com/s/12zcvDv6h-3AiGy9B-cOfjA \n提取码: w3u5')
+  location.href = 'https://pan.baidu.com/s/12zcvDv6h-3AiGy9B-cOfjA'
 }
 </script>
 

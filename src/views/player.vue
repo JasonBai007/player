@@ -9,8 +9,8 @@
         <audio :src="item.link" controls></audio>
       </div>
     </template>
-    <a href="https://gitee.com/lubanseven/nerves/raw/master/pdf/HopeandHelpforYourNerves.pdf">Download the PDF Version</a>
-    <footer>Developed by JasonBai</footer>
+    <a href="" @click="download">Download the PDF Version</a>
+    <footer>Developed by JasonBai width Vue3.2.7</footer>
   </div>
 </template>
 
@@ -39,6 +39,11 @@ function getList() {
     .then((data) => {
       list.value = data;
     });
+}
+
+function download(e) {
+  e.preventDefault()
+  alert('链接: https://pan.baidu.com/s/12zcvDv6h-3AiGy9B-cOfjA 提取码: w3u5 复制这段内容后打开百度网盘手机App，操作更方便哦')
 }
 </script>
 

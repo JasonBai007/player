@@ -10,7 +10,7 @@
       </div>
     </template>
     <a href="" @click="download">Download the PDF Version</a>
-    <footer>Developed by JasonBai width Vue3.2.7</footer>
+    <footer>Developed by JasonBai with Vue@3.2.7</footer>
   </div>
 </template>
 
